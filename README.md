@@ -1,6 +1,6 @@
 # Tymonyz - Generador Automático de Videos de Noticias para TikTok
 
-Este proyecto automatiza la creación y subida de videos de noticias a TikTok, utilizando IA para generar narraciones y procesamiento de video para crear contenido atractivo.
+Este proyecto automatiza la creación y subida de videos de noticias a TikTok, utilizando IA para generar narraciones y procesamiento de video para crear contenido atractivo. Actualmente sube las 5 noticias mas importantes del dia, en Argentina. Cuenta: https://www.tiktok.com/@argnewsia
 
 > **Nota importante**: Este proyecto utiliza el módulo [TikTok-Auto-Uploader](https://github.com/makiisthenes/TiktokAutoUploader) para la funcionalidad de subida de videos a TikTok. Este módulo es una dependencia externa y mantiene su propia licencia y términos de uso.
 
