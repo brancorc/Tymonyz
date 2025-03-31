@@ -1,0 +1,31 @@
+# Este proyecto utiliza el módulo TikTok-Auto-Uploader de makiisthenes
+# Fuente: https://github.com/makiisthenes/TiktokAutoUploader
+# Este módulo es una dependencia externa y mantiene su propia licencia y términos de uso
+
+# Dependencias principales
+python-dotenv==1.0.1
+requests==2.31.0
+moviepy==1.0.3
+Pillow==10.2.0
+numpy==1.26.4
+
+# Dependencias para TikTok Uploader
+fake-useragent==1.4.0
+selenium==4.17.2
+undetected-chromedriver @ git+https://github.com/ultrafunkamsterdam/undetected-chromedriver.git
+requests-auth-aws-sigv4==0.7
+beautifulsoup4==4.12.3
+lxml==5.1.0
+
+# Dependencias para procesamiento de video
+imageio==2.33.1
+imageio-ffmpeg==0.4.9
+
+# Dependencias para web scraping
+requests-html==0.10.0
+pyppeteer==1.0.2
+websockets==12.0
+
+# Dependencias para utilidades
+tqdm==4.66.2
+urllib3==2.2.1 

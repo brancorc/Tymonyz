@@ -1,0 +1,60 @@
+# Variables de entorno
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Directorios de credenciales y datos sensibles
+credentials/
+*.json
+*.pem
+*.key
+
+# Directorios de sistema
+.DS_Store
+Thumbs.db
+
+# Directorios de IDEs
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Archivos temporales
+*.log
+*.tmp
+*.temp
+temp/
+tmp/
+
+# Directorios de dependencias
+venv/
+env/
+ENV/
+
+# Archivos de video y audio generados
+assets/audios/*
+assets/texts/*
+!assets/audios/.gitkeep
+!assets/texts/.gitkeep 
