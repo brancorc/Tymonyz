@@ -24,7 +24,7 @@ def video(video_fondo, salida_video_path, texto_miniatura): #recibe un video de 
     # Asegurarse de que el video es lo suficientemente largo
     if video_duration <= duracion_audio:
         print("El video original es demasiado corto.")
-        nuevo_video_fondo = BACKGROUND_VIDEOS + str(random.randint(0, 6)) + ".mp4" #direccion de un video de fondo (debe ser random)
+        nuevo_video_fondo = BACKGROUND_VIDEOS + "/v" + str(random.randint(0, 6)) + ".mp4" #direccion de un video de fondo (debe ser random)
         video(nuevo_video_fondo, salida_video_path, texto_miniatura) #llamar a la función video para generar el video con subtítulos y audio de voz. (llamado video_generado.mp4)
     else:
 
@@ -55,7 +55,7 @@ def video(video_fondo, salida_video_path, texto_miniatura): #recibe un video de 
         final_clip = final_clip.with_audio(mixed_audio)
         
         # Transcribir el audio para obtener las palabras y tiempos
-        model = whisper.load_model("base", device="cpu")
+        model = whisper.load_model("base")
         result = model.transcribe(AUDIO_IA_PATH, word_timestamps=True)
 
         # Extraer palabras y sus tiempos

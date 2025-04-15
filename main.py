@@ -10,7 +10,7 @@ from datetime import datetime
 
 logger = get_logger()
 
-def wrap_text(text, max_chars=23):
+def wrap_text(text, max_chars=20):
     """
     Agrega saltos de línea al texto sin cortar palabras a la mitad. (para la miniatura del video)
     
@@ -85,7 +85,7 @@ def main():
 
                 # Generar video
                 video_fondo = BACKGROUND_VIDEOS + "/v" + str(random.randint(0, 6)) + ".mp4"
-                path_video_generado = r"C:\Users\branc\Escritorio\tymonyz\src\TiktokAutoUploader\VideosDirPath\video_generado" + str(i) + ".mp4"
+                path_video_generado = r"C:\Users\branc\Escritorio\github\tymonyz\src\TiktokAutoUploader\VideosDirPath\video_generado" + str(i) + ".mp4"
                 
                 texto_miniatura = wrap_text(titulo) # Agregar saltos de línea al texto para la miniatura
                 
