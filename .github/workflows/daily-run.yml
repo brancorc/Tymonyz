@@ -1,0 +1,38 @@
+name: Ejecución Diaria de Generación de Videos
+
+on:
+  schedule:
+    # Se ejecutará todos los días a las 00:00 UTC
+    - cron: '0 0 * * *'
+  workflow_dispatch:  # Permite ejecutar manualmente desde GitHub
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v2
+    
+    - name: Configurar Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.9'
+    
+    - name: Instalar dependencias
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+    
+    - name: Configurar variables de entorno
+      env:
+        TIKTOK_USERNAME: ${{ secrets.TIKTOK_USERNAME }}
+        TIKTOK_PASSWORD: ${{ secrets.TIKTOK_PASSWORD }}
+        OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+      run: |
+        cp .env.example .env
+        echo "TIKTOK_USERNAME=$TIKTOK_USERNAME" >> .env
+        echo "TIKTOK_PASSWORD=$TIKTOK_PASSWORD" >> .env
+        echo "OPENAI_API_KEY=$OPENAI_API_KEY" >> .env
+    
+    - name: Ejecutar script
+      run: python main.py 
