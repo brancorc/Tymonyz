@@ -28,6 +28,12 @@ jobs:
         TIKTOK_USERNAME: ${{ secrets.TIKTOK_USERNAME }}
         TIKTOK_PASSWORD: ${{ secrets.TIKTOK_PASSWORD }}
         OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        MEDIASTACK_API_KEY: ${{ secrets.MEDIASTACK_API_KEY }}
+        DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+        GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        NEWSDATA_API_KEY: ${{ secrets.NEWSDATA_API_KEY }}
+        GOOGLE_APPLICATION_CREDENTIALS: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}
+
       run: |
         cp .env.example .env
         echo "TIKTOK_USERNAME=$TIKTOK_USERNAME" >> .env
